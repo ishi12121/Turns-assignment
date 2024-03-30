@@ -33,8 +33,78 @@ const jobs = [
       location: 'Berlin',
       isRemote: false,
       salary: '$80,000',
-    },
-    // Add more job objects as needed
+  },
+  {
+    id: 6,
+    title: 'DevOps Engineer',
+    location: 'Austin',
+    isRemote: true,
+    salary: '$115,000',
+  },
+  {
+    id: 7,
+    title: 'Database Administrator',
+    location: 'Chicago',
+    isRemote: false,
+    salary: '$95,000',
+  },
+  {
+    id: 8,
+    title: 'Systems Analyst',
+    location: 'Boston',
+    isRemote: true,
+    salary: '$85,000',
+  },
+  {
+    id: 9,
+    title: 'Network Engineer',
+    location: 'San Jose',
+    isRemote: false,
+    salary: '$105,000',
+  },
+  {
+    id: 10,
+    title: 'Security Analyst',
+    location: 'Seattle',
+    isRemote: true,
+    salary: '$120,000',
+  },
+  {
+    id: 11,
+    title: 'Full Stack Developer',
+    location: 'San Francisco',
+    isRemote: false,
+    salary: '$110,000',
+  },
+  {
+    id: 12,
+    title: 'Mobile Developer',
+    location: 'New York',
+    isRemote: true,
+    salary: '$100,000',
+  },
+  {
+    id: 13,
+    title: 'QA Engineer',
+    location: 'London',
+    isRemote: false,
+    salary: '$80,000',
+  },
+  {
+    id: 14,
+    title: 'Hardware Engineer',
+    location: 'Berlin',
+    isRemote: true,
+    salary: '$90,000',
+  },
+  {
+    id: 15,
+    title: 'Project Manager',
+    location: 'Austin',
+    isRemote: false,
+    salary: '$100,000',
+  }
+   
   ];
   
   export default jobs;
