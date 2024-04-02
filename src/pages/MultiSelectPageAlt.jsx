@@ -1,10 +1,10 @@
-// MultiSelectPage.jsx
+// MultiSelectPageAlt.jsx
 import React, { useState } from "react";
-import JobCard from "../components/JobCard";
 import Customselect from "../components/Customselect";
-import '../App.css'; // Import the App.css file
-import "./MultiSelectPageAlt.css"
-const MultiSelectPage = ({ jobs }) => {
+import "../App.css"; // Import the App.css file
+import AltCustomselect from "../components/AltCustomselect";
+
+const MultiSelectPageAlt = ({ jobs }) => {
   const [selectedJobs, setSelectedJobs] = useState([]);
   const handleJobSelect = (jobs) => {
     setSelectedJobs(jobs);
@@ -12,32 +12,33 @@ const MultiSelectPage = ({ jobs }) => {
 
   return (
     <div className="container">
-      <h2>Multi Select</h2>
-      <div className="select-container">
-        <Customselect
+      <h2>Multi Select - Input Display</h2>
+      <div className="input-display-container">
+        <AltCustomselect
           options={jobs.map((job) => job.title)}
           isMulti
           value={selectedJobs}
           onChange={handleJobSelect}
+          placeholder="Select job(s)"
         />
       </div>
       {selectedJobs.length > 0 && (
         <div>
           <h3>Selected Jobs:</h3>
-          <ul>
+          <div className="selected-jobs-container">
             {selectedJobs.map((jobTitle) => {
               const job = jobs.find((job) => job.title === jobTitle);
               return (
-                <li key={job.id}>
-                  <JobCard job={job} />
-                </li>
+                <div key={job.id} className="selected-job">
+                  {job.title}
+                </div>
               );
             })}
-          </ul>
+          </div>
         </div>
       )}
     </div>
   );
 };
 
-export default MultiSelectPage;
+export default MultiSelectPageAlt;

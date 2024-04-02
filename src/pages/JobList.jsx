@@ -5,13 +5,20 @@ import Customselect from "../components/Customselect.jsx";
 import "../App.css"; // Import the App.css file
 
 const LocationFilter = ({ locations, selectedLocation, onLocationChange }) => {
+  const [placeholder, setPlaceholder] = useState("Filter by location");
+
+  const handleLocationChange = (location) => {
+    onLocationChange(location);
+    setPlaceholder(location || "Filter by location"); // Set the placeholder based on whether an option is selected
+  };
+
   return (
     <div className="location-filter">
       <Customselect
         options={locations}
         value={selectedLocation}
-        onChange={onLocationChange}
-        placeholder="Filter by location"
+        onChange={handleLocationChange}
+        placeholder={placeholder}
       />
     </div>
   );

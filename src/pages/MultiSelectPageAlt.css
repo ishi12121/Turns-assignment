@@ -1,0 +1,21 @@
+.input-display-container {
+    margin-bottom: 20px;
+  }
+  
+  .selected-jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .selected-job {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .selected-job:last-child {
+    margin-right: 0;
+  }
+  
+  .selected-job > * {
+    margin-bottom: 5px;
+  }
