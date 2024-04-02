@@ -1,18 +1,33 @@
 import React, { useState } from "react";
 import "./Customselect.css";
 
+/**
+ * Custom Select component.
+ * @param {Object} props - Component props.
+ * @param {string[]} props.options - The list of options to display in the dropdown.
+ * @param {boolean} props.isMulti - Flag indicating whether multiple options can be selected.
+ * @param {string|string[]} props.value - The currently selected option(s).
+ * @param {(value: string|string[]) => void} props.onChange - Function to handle changes in selected option(s).
+ * @param {string} [props.placeholder="Select an option"] - Placeholder text for the input field.
+ * @returns {JSX.Element} Customselect component.
+ */
 const Customselect = ({ options, isMulti, value, onChange, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOptions, setSelectedOptions] = useState(
-    isMulti ? [] : value || ""
-  );
+  const [selectedOptions, setSelectedOptions] = useState(isMulti ? [] : value || "");
   const [searchTerm, setSearchTerm] = useState("");
   const [focusedOptionIndex, setFocusedOptionIndex] = useState(-1);
 
+  /**
+   * Toggle the dropdown visibility.
+   */
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
+  /**
+   * Handle keydown events for keyboard navigation.
+   * @param {React.KeyboardEvent} e - The keyboard event object.
+   */
   const handleKeyDown = (e) => {
     const filteredOptionsCount = filteredOptions.length;
 
@@ -34,6 +49,10 @@ const Customselect = ({ options, isMulti, value, onChange, placeholder }) => {
     }
   };
 
+  /**
+   * Handle selection of an option.
+   * @param {string} option - The selected option.
+   */
   const handleOptionSelect = (option) => {
     if (isMulti) {
       setSelectedOptions((prevOptions) => {
@@ -50,6 +69,10 @@ const Customselect = ({ options, isMulti, value, onChange, placeholder }) => {
     onChange(isMulti ? selectedOptions : option);
   };
 
+  /**
+   * Handle removal of a selected option in multi-select mode.
+   * @param {string} option - The option to remove.
+   */
   const handleRemoveOption = (option) => {
     setSelectedOptions((prevOptions) =>
       prevOptions.filter((opt) => opt !== option)
@@ -57,6 +80,10 @@ const Customselect = ({ options, isMulti, value, onChange, placeholder }) => {
     onChange(selectedOptions.filter((opt) => opt !== option));
   };
 
+  /**
+   * Handle input field value changes for search/filtering.
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The input change event object.
+   */
   const handleSearch = (e) => {
     const { value } = e.target;
 
@@ -71,6 +98,9 @@ const Customselect = ({ options, isMulti, value, onChange, placeholder }) => {
     }
   };
 
+  /**
+   * Filter options based on search term.
+   */
   const filteredOptions = options.filter((option) =>
     option.toLowerCase().includes(searchTerm.toLowerCase())
   );
