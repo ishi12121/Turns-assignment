@@ -1,27 +1,29 @@
+// SingleSelectPage.jsx
 import React, { useState } from "react";
-import Select from "../components/Select";
-import JobCard from "../components/JobCard"; // Import the JobCard component
+import JobCard from "../components/JobCard";
+import Customselect from "../components/Customselect";
+import '../App.css'; // Import the App.css file
 
 const SingleSelectPage = ({ jobs }) => {
   const [selectedJob, setSelectedJob] = useState(null);
-
   const handleJobSelect = (job) => {
     setSelectedJob(job);
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Single Select</h2>
-      <Select
-        options={jobs.map((job) => job.title)}
-        value={selectedJob}
-        onChange={handleJobSelect}
-      />
+      <div className="select-container">
+        <Customselect
+          options={jobs.map((job) => job.title)}
+          value={selectedJob}
+          onChange={handleJobSelect}
+        />
+      </div>
       {selectedJob && (
         <div>
           <h3>Selected Job:</h3>
-          <JobCard job={jobs.find((job) => job.title === selectedJob)} />{" "}
-          {/* Render the JobCard with the selected job */}
+          <JobCard job={jobs.find((job) => job.title === selectedJob)} />
         </div>
       )}
     </div>

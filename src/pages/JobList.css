@@ -1,0 +1,49 @@
+/* JobList.css */
+.job-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Thaloma, Geneva, Verdana, sans-serif;
+}
+
+.job-list-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.location-filter {
+  margin-bottom: 20px;
+}
+
+.job-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* JobCard.css */
+.job-card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* CustomSelect.css (from the previous example) */
+/* ... (existing styles) ... */

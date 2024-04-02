@@ -44,10 +44,20 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 80px; /* Add some padding-top for the nav bar */
 }
+
 .nav-links {
   list-style: none;
   padding: 0;
+  margin: 0;
+  background-color: #f8f8f8; /* Add a background color for the nav bar */
+  padding: 10px;
+  position: fixed; /* Make the nav bar fixed */
+  top: 0; /* Position it at the top */
+  left: 0;
+  right: 0;
+  z-index: 1; /* Ensure the nav bar is on top of other elements */
 }
 
 .nav-links li {
@@ -63,4 +73,28 @@
 
 .nav-links li a:hover {
   color: #007bff;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.select-container {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }

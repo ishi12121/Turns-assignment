@@ -1,23 +1,26 @@
+// MultiSelectPage.jsx
 import React, { useState } from "react";
-import Select from "../components/Select";
-import JobCard from "../components/JobCard"; // Import the JobCard component
+import JobCard from "../components/JobCard";
+import Customselect from "../components/Customselect";
+import '../App.css'; // Import the App.css file
 
 const MultiSelectPage = ({ jobs }) => {
   const [selectedJobs, setSelectedJobs] = useState([]);
-
   const handleJobSelect = (jobs) => {
     setSelectedJobs(jobs);
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Multi Select</h2>
-      <Select
-        options={jobs.map((job) => job.title)}
-        isMulti
-        value={selectedJobs}
-        onChange={handleJobSelect}
-      />
+      <div className="select-container">
+        <Customselect
+          options={jobs.map((job) => job.title)}
+          isMulti
+          value={selectedJobs}
+          onChange={handleJobSelect}
+        />
+      </div>
       {selectedJobs.length > 0 && (
         <div>
           <h3>Selected Jobs:</h3>
@@ -26,7 +29,7 @@ const MultiSelectPage = ({ jobs }) => {
               const job = jobs.find((job) => job.title === jobTitle);
               return (
                 <li key={job.id}>
-                  <JobCard job={job} /> {/* Render the JobCard for each selected job */}
+                  <JobCard job={job} />
                 </li>
               );
             })}

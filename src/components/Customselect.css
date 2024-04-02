@@ -1,0 +1,117 @@
+/* CustomSelect Container */
+.custom-select {
+  position: relative;
+  width: 300px; /* Set the desired initial width */
+  font-family: 'Segoe UI', Thaloma, Geneva, Verdana, sans-serif;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #575353;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.input-container:hover,
+.input-container:focus-within {
+  border-color: #7d7474;
+}
+
+.input-container input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.input-container .arrow {
+  color: #ffffff;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.input-container.open .arrow {
+  transform: rotate(180deg);
+}
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #3b3636;
+  border: 1px solid #5b5151;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.option-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.option-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option-list li:hover {
+  background-color: #463e3e;
+}
+
+/* Custom Scrollbar */
+.dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown::-webkit-scrollbar-track {
+  background-color: #3b3636;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+  background-color: #6b6363;
+  border-radius: 4px;
+}
+
+.dropdown::-webkit-scrollbar-thumb:hover {
+  background-color: #7d7474;
+}
+/* Selected Options */
+.selected-options {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.selected-option {
+  background-color: #4b4949;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.selected-option button {
+  background-color: transparent;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.selected-option button:hover {
+  color: #333;
+}
