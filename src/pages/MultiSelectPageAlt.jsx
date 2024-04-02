@@ -1,7 +1,7 @@
-// MultiSelectPageAlt.jsx
+
 import React, { useState } from "react";
 import Customselect from "../components/Customselect";
-import "../App.css"; // Import the App.css file
+import "../App.css";
 import AltCustomselect from "../components/AltCustomselect";
 
 const MultiSelectPageAlt = ({ jobs }) => {

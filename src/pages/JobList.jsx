@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "./JobList.css";
 import JobCard from "../components/JobCard.jsx";
 import Customselect from "../components/Customselect.jsx";
-import "../App.css"; // Import the App.css file
+import "../App.css"; 
 
 const LocationFilter = ({ locations, selectedLocation, onLocationChange }) => {
   const [placeholder, setPlaceholder] = useState("Filter by location");
 
   const handleLocationChange = (location) => {
     onLocationChange(location);
-    setPlaceholder(location || "Filter by location"); // Set the placeholder based on whether an option is selected
+    setPlaceholder(location || "Filter by location");
   };
 
   return (

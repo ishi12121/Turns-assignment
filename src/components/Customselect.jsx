@@ -61,14 +61,12 @@ const Customselect = ({ options, isMulti, value, onChange, placeholder }) => {
     const { value } = e.target;
 
     if (value.length === 1) {
-      // Open dropdown when typing the first letter
       setIsOpen(true);
     }
 
     setSearchTerm(value);
 
     if (!isOpen) {
-      // Do not update selected options until an option is selected
       return;
     }
   };
@@ -82,10 +80,10 @@ const Customselect = ({ options, isMulti, value, onChange, placeholder }) => {
       <div className="input-container" onClick={toggleDropdown}>
         <input
           type="text"
-          value={searchTerm} // Display searchTerm in the input field
+          value={searchTerm} 
           onChange={handleSearch}
           onKeyDown={handleKeyDown}
-          placeholder={placeholder || "Select an option"} // Use provided placeholder or default
+          placeholder={placeholder || "Select an option"} 
         />
         <span className="arrow">{isOpen ? "▲" : "▼"}</span>
       </div>

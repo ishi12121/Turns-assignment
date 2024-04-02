@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import JobCard from "../components/JobCard";
 import Customselect from "../components/Customselect";
-import "../App.css"; // Import the App.css file
+import "../App.css"; 
 
 const SingleSelectPage = ({ jobs }) => {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -9,7 +9,7 @@ const SingleSelectPage = ({ jobs }) => {
 
   const handleJobSelect = (job) => {
     setSelectedJob(job);
-    setPlaceholder(job || "Select a job"); // Set the placeholder based on whether an option is selected
+    setPlaceholder(job || "Select a job");
   };
 
   return (

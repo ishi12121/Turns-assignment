@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import JobCard from "../components/JobCard";
 import Customselect from "../components/Customselect";
-import '../App.css'; // Import the App.css file
+import '../App.css';
 import "./MultiSelectPageAlt.css"
 const MultiSelectPage = ({ jobs }) => {
   const [selectedJobs, setSelectedJobs] = useState([]);

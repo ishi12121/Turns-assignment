@@ -1,6 +1,6 @@
-// JobCard.js
+
 import React from "react";
-import "./JobCard.css"; // Import your CSS file
+import "./JobCard.css"; 
 
 const JobCard = ({ job }) => {
   return (

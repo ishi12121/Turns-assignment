@@ -44,20 +44,20 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  padding-top: 80px; /* Add some padding-top for the nav bar */
+  padding-top: 80px; 
 }
 
 .nav-links {
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: #f8f8f8; /* Add a background color for the nav bar */
+  background-color: #f8f8f8;
   padding: 10px;
-  position: fixed; /* Make the nav bar fixed */
-  top: 0; /* Position it at the top */
+  position: fixed; 
+  top: 0;
   left: 0;
   right: 0;
-  z-index: 1; /* Ensure the nav bar is on top of other elements */
+  z-index: 1; 
 }
 
 .nav-links li {
