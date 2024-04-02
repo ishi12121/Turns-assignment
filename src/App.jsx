@@ -13,7 +13,7 @@ const App = () => {
         <nav>
           <ul className="nav-links">
             <li>
-              <Link to="/">Job List</Link>
+              <Link to="/">Main</Link>
             </li>
             <li>
               <Link to="/single-select">Single Select</Link>
